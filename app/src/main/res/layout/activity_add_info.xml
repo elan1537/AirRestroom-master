@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context="com.air.restroom.Add_info">
+
+    <TextView android:layout_marginTop="10dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="이름"
+              android:textSize="15dp"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:id="@+id/label"/>
+
+    <TextView android:layout_marginTop="10dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:text="위치"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"/>
+
+    <TextView android:layout_marginTop="10dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:text="화장실 개방 여부"/>
+
+    <RadioGroup android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        <RadioButton android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="개방"
+                     android:layout_weight="1"
+                     android:id="@+id/opened"/>
+
+        <RadioButton android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="미개방"
+                     android:layout_weight="1"
+                     android:id="@+id/locked"/>
+    </RadioGroup>
+
+    <TextView android:layout_marginTop="10dp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textSize="15dp"
+              android:text="화장실 종류"/>
+
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1">
+
+            <CheckBox android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="남자 화장실"
+                      android:id="@+id/man"/>
+
+            <CheckBox android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="여자 화장실"
+                      android:id="@+id/woman"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1">
+
+            <CheckBox android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="남자(장애인) 화장실"
+                      android:id="@+id/man_disabled"/>
+
+            <CheckBox android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="여자(장애인) 화장실"
+                      android:id="@+id/woman_disabled"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_gravity="center"
+                  android:orientation="horizontal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+
+        <Button android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:layout_weight="1"
+                android:onClick="okClicked"
+                android:backgroundTint="#ffffff"/>
+
+        <Button android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:text="CANCEL"
+                android:layout_weight="1"
+                android:onClick="cancelClicked"
+                android:backgroundTint="#ffffff"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
